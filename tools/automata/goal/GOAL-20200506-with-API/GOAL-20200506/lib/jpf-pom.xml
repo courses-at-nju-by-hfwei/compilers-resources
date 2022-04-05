@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.sf.jpf</groupId>
+	<artifactId>jpf</artifactId>
+	<packaging>jar</packaging>
+	<name>jpf</name>
+	<version>1.5</version>
+	<description>Java Plugin Framework</description>
+	
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, Version 2.1, February 1999</name>
+			<url>http://jpf.sourceforge.net/license.txt</url>
+		</license>
+	</licenses>
+	
+	<build>
+		<sourceDirectory>source</sourceDirectory>
+		<outputDirectory>jpf-target/classes</outputDirectory>
+		<directory>jpf-target</directory>
+		<resources>
+			<resource>
+				<directory>source/</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/*.jpage</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>5</source>
+					<target>5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+						<manifestEntries>
+							<Specification-Title>Java Plug-in Framework (JPF) - core library</Specification-Title>
+							<Specification-Version>${project.version}</Specification-Version>
+							<Specification-Vendor>http://jpf.sourceforge.net</Specification-Vendor>
+							<Implementation-Title>org.java.plugin</Implementation-Title>
+							<Implementation-Version>${project.version}</Implementation-Version>
+							<Implementation-Vendor>http://jpf.sourceforge.net</Implementation-Vendor>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+	</dependencies>
+</project>

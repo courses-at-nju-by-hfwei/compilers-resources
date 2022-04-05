@@ -1,0 +1,14 @@
+class A { int x; };       // define class A
+class B : A { int y; };   // define class B subclass of A
+class C : A { int z; };   // define class C subclass of A
+void f() {
+  A a; A a2; B b; C c;    // define 4 object instances
+  a = a2;        // a, a2 have same type A, so it's ok
+  a = b;         // b's class is subclass of A but not ptr; NOT ok
+  b = a;         // a's class is not below B so it's NOT ok
+  b = c;         // b and c classes are siblings of A; not compatible
+  A *pA; B *pB; C *pC;    // define 3 object pointers
+  pA = pB;       // pB's points to B: B is a subclass of A so it's ok
+  pB = pA;       // pA's points to class not below B so it's NOT ok
+  pB = pC;       // pB and pC point to sibling classes of A; NOT ok
+}

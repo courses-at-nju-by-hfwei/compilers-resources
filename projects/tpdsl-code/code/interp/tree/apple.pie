@@ -1,0 +1,7 @@
+i = 0
+while i<10:
+	print i*3.2
+	i = i + 1
+	if i<5 print i + " is less than 5"
+	else print "foo"
+.

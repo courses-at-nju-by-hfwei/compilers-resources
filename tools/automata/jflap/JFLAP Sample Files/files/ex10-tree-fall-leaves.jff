@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>lsystem</type>
+	<!--The L-system axiom.-->
+	<axiom>B</axiom>
+	<!--The rewriting rules.-->
+	<production>
+		<left>B</left>
+		<right>[ T L - B + + B ]</right>
+	</production>
+	<production>
+		<left>L</left>
+		<right>[ { - g + + g % - - g } ]</right>
+	</production>
+	<production>
+		<left>T</left>
+		<right>T g</right>
+	</production>
+	<production>
+		<left>{</left>
+		<right>@@ {</right>
+	</production>
+	<!--The drawing parameters.-->
+	<parameter>
+		<name>polygonColor</name>
+		<value>green</value>
+	</parameter>
+</structure>

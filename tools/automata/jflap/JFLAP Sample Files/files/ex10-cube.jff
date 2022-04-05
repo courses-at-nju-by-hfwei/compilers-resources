@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>lsystem</type>
+	<!--The L-system axiom.-->
+	<axiom>[ &amp; g ^ g + g + g + g ] g + [ &amp; g ] g + [ &amp; g ] g + [ &amp; g ] g</axiom>
+	<!--The drawing parameters.-->
+	<parameter>
+		<name>angle</name>
+		<value>90</value>
+	</parameter>
+	<parameter>
+		<name>distance</name>
+		<value>50</value>
+	</parameter>
+</structure>

@@ -1,0 +1,8 @@
+digraph G {
+    rankdir=LR;
+    main [shape=box];
+    main -> f -> g;         // main calls f which calls g
+    f -> f [style=dotted] ; // f is recursive
+    f -> h;                 // f calls h
+}
+

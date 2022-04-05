@@ -1,0 +1,7 @@
+line 1:8 extraneous input 'XYZ' expecting '{'
+class T XYZ {
+        ^^^
+line 2:6 no viable alternative at input 'int;'
+  int ;
+      ^
+class T

@@ -1,0 +1,6 @@
+    sconst "hi"
+    call f()
+    halt
+.def f: args=0, locals=0
+    print
+    ret

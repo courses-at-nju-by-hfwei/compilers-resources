@@ -1,0 +1,2 @@
+grammar Hi;
+a : 'hi' ;

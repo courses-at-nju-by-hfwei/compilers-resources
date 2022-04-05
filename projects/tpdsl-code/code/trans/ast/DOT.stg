@@ -1,0 +1,22 @@
+group DOT;
+
+file(gname,nodes,edges) ::= <<
+digraph <gname> {
+   node [shape=plaintext, fontsize=12, fontname="Courier", height=.1];
+   ranksep=.3;
+   edge [arrowsize=.5]
+   <nodes; separator="\n">
+   <edges; separator="\n">
+}
+>>
+
+// START: node
+node(name,text) ::= <<
+<name> [label="<text>"];
+>>
+// END: node
+
+// don't need quotes around node names; use just: from -> to
+edge(from,to) ::= "<from> -> <to>" 
+
+

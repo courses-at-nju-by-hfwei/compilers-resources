@@ -1,0 +1,22 @@
+.globals 1 ; allocate space for i
+.def main: args=0, locals=0
+; i = 0
+	iconst 0
+	gstore 0
+; while i<10:
+loop:
+	gload 0
+	iconst 10
+	ilt
+	brf done
+; print i
+	gload 0
+	print
+;	i = i + 1
+	gload 0
+	iconst 1
+	iadd
+	gstore 0
+	br loop
+done:
+	halt

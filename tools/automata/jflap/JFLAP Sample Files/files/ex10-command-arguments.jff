@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>lsystem</type>
+	<!--The L-system axiom.-->
+	<axiom>X</axiom>
+	<!--The rewriting rules.-->
+	<production>
+		<left>X</left>
+		<right>f a=a+1 [ + color=blue g(a*a) ] f [ - color=red g(a) ] X</right>
+	</production>
+	<!--The drawing parameters.-->
+	<parameter>
+		<name>a</name>
+		<value>0</value>
+	</parameter>
+	<parameter>
+		<name>angle</name>
+		<value>90</value>
+	</parameter>
+	<parameter>
+		<name>distance</name>
+		<value>1</value>
+	</parameter>
+</structure>

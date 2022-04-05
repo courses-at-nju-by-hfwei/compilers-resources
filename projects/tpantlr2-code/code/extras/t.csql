@@ -1,0 +1,13 @@
+void f(int i) {
+	resultset r = select * from users where ID='1999' and state<>'CA';
+	int select = 'a';
+	int from = 'b';
+	int x = select * from;
+
+	int nextID = select ID from users where name='parrt' + 1;
+}
+
+void errors() {
+	int x = 'a';
+	select * from users; // can't be statement
+}

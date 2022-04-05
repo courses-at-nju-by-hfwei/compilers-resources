@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ "${1}" == "" ]]; then
+  echo "./generate_config \"/path/to/GOAL\""
+  exit
+fi
+
+sed "s/\/path\/to\/GOAL/${1////\\/}/g" lbtt_goal.conf.example

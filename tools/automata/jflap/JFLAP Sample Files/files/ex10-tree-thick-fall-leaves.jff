@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>lsystem</type>
+	<!--The L-system axiom.-->
+	<axiom>R ~ ## B</axiom>
+	<!--The rewriting rules.-->
+	<production>
+		<left>B</left>
+		<right>[ ~ ## T L - B + + B ]</right>
+	</production>
+	<production>
+		<left>L</left>
+		<right>[ angle=15 { - g + + g % - - g } ]</right>
+	</production>
+	<production>
+		<left>R</left>
+		<right>! @@ R</right>
+	</production>
+	<production>
+		<left>T</left>
+		<right>T g</right>
+	</production>
+	<!--The drawing parameters.-->
+	<parameter>
+		<name>angle</name>
+		<value>15</value>
+	</parameter>
+	<parameter>
+		<name>color</name>
+		<value>brown</value>
+	</parameter>
+	<parameter>
+		<name>polygonColor</name>
+		<value>forestGreen</value>
+	</parameter>
+</structure>

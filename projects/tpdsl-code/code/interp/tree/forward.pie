@@ -1,0 +1,4 @@
+print f(4)           # references definition on next line
+def f(x) return 2*x
+print new User       # references definition on next line
+struct User { name, password }

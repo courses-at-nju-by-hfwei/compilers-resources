@@ -1,0 +1,5 @@
+struct User { name, password }
+u = new User
+u.name = "parrt"
+print "Login: "+u.name
+print u

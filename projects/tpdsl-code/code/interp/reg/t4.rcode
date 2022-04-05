@@ -1,0 +1,14 @@
+.def main: args=0, locals=1
+	iconst r1, 10
+	call f(), r1
+	print r0
+	halt
+.def f: args=1, locals=3 ; int f(int x)
+	iconst r2,2           ; get int 2 into 1st non-arg register
+	imul r1,r2,r3        ; mult arg by 2
+	iconst r4,30          ; get int 2 into a reg
+	call g(), r3         ; leave result in r0; args=[r3,r4]
+	ret                  ; return value in r0
+.def g: args=2, locals=0 ; int g(int x, int y)
+        iadd r1, r2, r0  ; return x+y
+	ret                  ; return value in r0

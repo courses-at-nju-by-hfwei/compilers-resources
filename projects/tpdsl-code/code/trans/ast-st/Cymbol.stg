@@ -1,0 +1,72 @@
+group Cymbol;
+
+// START: file
+file(defs) ::= <<
+<defs; separator="\n">
+>>
+// END: file
+
+// START: class
+class(name, sup, members) ::= <<
+class <name> <if(sup)>: <sup><endif> {
+    <members>
+};
+>>
+// END: class
+
+// START: method
+method(name, retType, args, block) ::= <<
+<retType> <name>(<args; separator=", ">) <block>
+>>
+// END: method
+
+// START: block
+block(stats) ::= <<
+{
+    <stats; separator="\n">
+}
+>>
+// END: block
+
+// START: if
+if(cond, stat1, stat2) ::= <<
+if ( <cond> ) <stat1>
+<if(stat2)>else <stat2><endif>
+>>
+// END: if
+
+// START: assign
+assign(a,b) ::= "<a> = <b>;"
+// END: assign
+
+return(v) ::= "return <v>;"
+
+// START: callstat
+callstat(name, args) ::= "<call(...)>;" // call() inherits name,args
+// END: callstat
+
+// START: decl
+decl(name, type, init, ptr) ::=
+    "<type> <if(ptr)>*<endif><name><if(init)> = <init><endif>"
+var(name, type, init, ptr) ::= "<decl(...)>;"
+arg(name, type, init, ptr) ::= "<decl(...)>"
+// END: decl
+
+// START: ops
+operation(op, x, y) ::= "(<x> <op> <y>)"
+// END: ops
+// START: operator
+operator(o) ::= "<o>"
+// END: operator
+unary_minus(v) ::= "-(<v>)"
+unary_not(v) ::= "!(<v>)"
+addr(v) ::= "&(<v>)"
+deref(v) ::= "*(<v>)"
+index(array, i) ::= "<array>[<i>]"
+member(obj, name) ::= "(<obj>).<name>"
+
+// START: call
+call(name, args) ::= <<
+<name>(<args; separator=", ">)
+>>
+// END: call

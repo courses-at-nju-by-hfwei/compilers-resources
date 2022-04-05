@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b13. -->
+<structure>
+	<type>turing</type>
+	<!--The list of states.-->
+	<state id="0">
+		<x>86.0</x>
+		<y>104.0</y>
+		<initial />
+	</state>
+	<state id="1">
+		<x>214.0</x>
+		<y>207.0</y>
+	</state>
+	<state id="2">
+		<x>73.0</x>
+		<y>212.0</y>
+		<final />
+	</state>
+	<state id="3">
+		<x>370.0</x>
+		<y>208.0</y>
+	</state>
+	<state id="4">
+		<x>485.0</x>
+		<y>128.0</y>
+	</state>
+	<!--The list of transitions.-->
+	<transition>
+		<from>0</from>
+		<to>1</to>
+		<read>a</read>
+		<write>#</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>4</from>
+		<to>3</to>
+		<read>a</read>
+		<write>a</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>3</from>
+		<to>4</to>
+		<read>a</read>
+		<write>#</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>2</to>
+		<read></read>
+		<write></write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>3</to>
+		<read>a</read>
+		<write>a</write>
+		<move>R</move>
+	</transition>
+</structure>

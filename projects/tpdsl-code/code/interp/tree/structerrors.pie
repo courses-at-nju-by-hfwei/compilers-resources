@@ -1,0 +1,6 @@
+struct User { name, password }
+u = new User
+u.name = "parrt"    # make u.name a string
+u.name.y = "parrt"  # u.name is a string not a struct
+u.x = 3             # x isn't a field of User; can't write to it
+print u.x           # check for unknown field in expr as well

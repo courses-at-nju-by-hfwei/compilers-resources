@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>lsystem</type>
+	<!--The L-system axiom.-->
+	<axiom>B</axiom>
+	<!--The rewriting rules.-->
+	<production>
+		<left>B</left>
+		<right>g - B + + B</right>
+	</production>
+</structure>

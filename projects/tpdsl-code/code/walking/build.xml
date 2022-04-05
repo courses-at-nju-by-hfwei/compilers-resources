@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ ! Excerpted from "Language Implementation Patterns",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
+-->
+<project default="compile" basedir=".">
+
+  <import file="../build-macros.xml" />
+
+  <property file="../build.properties" />
+
+  <target name="init">
+    <ant antfile="embedded/build.xml" target="init" inheritall="false" />
+    <!-- <ant antfile="patterns/build.xml" target="init" inheritall="false" /> -->
+    <ant antfile="tree-grammar/build.xml" target="init" inheritall="false" />
+    <ant antfile="visitor/build.xml" target="init" inheritall="false" />
+  </target>
+
+  <target name="clean">
+    <ant antfile="embedded/build.xml" target="clean" inheritall="false" />
+    <!-- <ant antfile="patterns/build.xml" target="clean" inheritall="false" /> -->
+    <ant antfile="tree-grammar/build.xml" target="clean" inheritall="false" />
+    <ant antfile="visitor/build.xml" target="clean" inheritall="false" />
+  </target>
+
+  <target name="generate">
+    <ant antfile="embedded/build.xml" target="generate" inheritall="false" />
+    <!-- <ant antfile="patterns/build.xml" target="generate" inheritall="false" /> -->
+    <ant antfile="tree-grammar/build.xml" target="generate" inheritall="false" />
+    <ant antfile="visitor/build.xml" target="generate" inheritall="false" />
+  </target>
+
+  <target name="compile">
+    <ant antfile="embedded/build.xml" target="compile" inheritall="false" />
+    <!-- <ant antfile="patterns/build.xml" target="compile" inheritall="false" /> -->
+    <ant antfile="tree-grammar/build.xml" target="compile" inheritall="false" />
+    <ant antfile="visitor/build.xml" target="compile" inheritall="false" />
+  </target>
+
+  <target name="run">
+    <ant antfile="embedded/build.xml" target="run" inheritall="false" />
+    <!-- <ant antfile="patterns/build.xml" target="run" inheritall="false" /> -->
+    <ant antfile="tree-grammar/build.xml" target="run" inheritall="false" />
+    <ant antfile="visitor/build.xml" target="run" inheritall="false" />
+  </target>
+
+</project>
+
+

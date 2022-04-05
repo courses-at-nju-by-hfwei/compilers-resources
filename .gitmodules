@@ -1,0 +1,3 @@
+[submodule "projects/flexbison"]
+	path = projects/flexbison
+	url = https://github.com/courses-at-nju-by-hfwei/flexbison

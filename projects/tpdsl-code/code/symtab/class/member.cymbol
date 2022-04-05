@@ -1,0 +1,13 @@
+int g; // should not be visible to access operations like a.g
+class Object { public: int hashCode() { return 0;} };
+class A : public Object {
+public:
+ int x;
+ void foo() { g = 1; } // can see global g
+};
+int main() {
+ A a;
+ a.hashCode(); // sees Object's hashCode()
+ a.x = 3;      // sees A's x field
+ a.g = 3;      // shouldn't see global g; ERROR!
+}

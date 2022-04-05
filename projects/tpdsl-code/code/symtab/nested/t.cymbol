@@ -1,0 +1,13 @@
+// start of global scope      // <callout id="co.nested-symtab-globals"/>
+int i = 9;
+float f(int x, float y)       //<callout id="co.nested-symtab-f"/> 
+{                             //<callout id="co.nested-symtab-f1"/> 
+    float i;
+    { float z = x+y; i = z; } //<callout id="co.nested-symtab-f2"/> 
+    { float z = i+1; i = z; } //<callout id="co.nested-symtab-f3"/> 
+    return i;
+}
+void g()                      //<callout id="co.nested-symtab-g"/> 
+{                             //<callout id="co.nested-symtab-g1"/> 
+    f(i,2);
+}

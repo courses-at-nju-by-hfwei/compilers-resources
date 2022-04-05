@@ -1,0 +1,18 @@
+// start of global scope    // <callout id="co.class-symtab-inherit-globals"/>
+// implicit class Object { int hashCode() {...} }  // <callout id="co.class-symtab-inherit-Object"/>
+class A {					// <callout id="co.class-symtab-inherit-A"/>
+public:
+ int x;
+ void foo()					// <callout id="co.class-symtab-inherit-A-foo"/>
+ { ; }						// <callout id="co.class-symtab-inherit-A-foo1"/>
+ void bar()					// <callout id="co.class-symtab-inherit-A-bar"/>
+ { ; }						// <callout id="co.class-symtab-inherit-A-bar1"/>
+};
+class B : public A {		// <callout id="co.class-symtab-inherit-B"/>
+ int y;
+ void foo()					// <callout id="co.class-symtab-inherit-B-foo"/>
+ {// <callout id="co.class-symtab-inherit-B-foo1"/>
+   this.x = this.y;
+   bar(); // invoke A::bar()
+ }
+};

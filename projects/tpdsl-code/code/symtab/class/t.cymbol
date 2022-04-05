@@ -1,0 +1,6 @@
+// globals  // <callout id="co.class-symtab-t-globals"/>
+int main() // <callout id="co.class-symtab-t-main"/>
+{           // <callout id="co.class-symtab-t-main1"/>
+ int x;
+ x = 3;
+}

@@ -1,0 +1,183 @@
+# Remember to change the path to GOAL.
+
+Translator
+{
+    Name = Tableau
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "tableau"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = Tester
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "tester"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = IncTableau
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "inctableau"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = GPVW
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "gpvw"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = GPVW+
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "gpvw+"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = LTL2AUT
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "ltl2aut"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = LTL2AUT+
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "ltl2aut+-pe-pi"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = Modella
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "modella"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = LTL2BA
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "ltl2ba"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = PLTL2BA
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "pltl2ba"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = Couvreur
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "couvreur"
+    Enabled = Yes
+}
+
+Translator
+{
+    Name = LTL2Buchi
+    Path = /path/to/GOAL/scripts/lbtt/translate
+    Parameters = "ltl2buchi"
+    Enabled = Yes
+}
+
+GlobalOptions
+{
+    # number of test rounds
+    Rounds = 100
+
+    # pause testing in case of an error or when receiving a break signal
+    Interactive = OnError,OnBreak
+
+    # 1 = show only numeric statistics, default = 3
+    Verbosity = 2
+
+    # enable all tests except the Buechi automata intersection emptiness test
+    ComparisonTest = Yes
+    ConsistencyTest = Yes
+    IntersectionTest = No
+
+    # perform the tests only in a single state of each state space
+    ModelCheck = Local
+
+    # abort the execution of a translator if it fails to give a result in
+    # the specified time (in seconds)
+    TranslatorTimeout = 300s
+}
+     
+FormulaOptions
+{
+    AbbreviatedOperators = Yes        # formula generation mode
+    GenerateMode = Normal
+    OutputMode = NNF                  # rewrite formulas in negation
+                                      # normal form before passing
+                                      # them to the translators
+     
+    ChangeInterval = 1                # new formula after each round
+     
+    RandomSeed = 4632912              # random seed
+     
+    Size = 5-15                       # 5 to 15 nodes in the parse
+                                      # tree of each formula
+     
+    Propositions = 3                  # allow at most three different
+                                      # propositions in each LTL formula
+     
+    PropositionPriority = 50          # priorities for propositional
+    TruePriority = 1                  # symbols
+    FalsePriority = 1
+     
+    AndPriority = 10                  # priorities for some logical
+    OrPriority = 10                   # operators
+    NotPriority = 10
+    EquivalencePriority = 5
+     
+    NextPriority = 5                  # priorities for some temporal
+    UntilPriority = 5                 # operators
+    ReleasePriority = 5
+    FinallyPriority = 2
+    GloballyPriority = 2
+     
+    DefaultOperatorPriority = 0       # disable all the remaining
+                                      # operators
+}
+     
+StatespaceOptions
+{
+    GenerateMode = RandomGraph        # generate random (not
+                                      # necessarily connected) graphs
+                                      # as state spaces
+     
+    ChangeInterval = 10               # new state space after every
+                                      # 10th test round
+     
+    RandomSeed = 37620                # random seed
+     
+    Size = 50                         # 50 states in each state space
+     
+    Propositions = 3                  # three propositions in each
+                                      # state of each state space
+     
+    EdgeProbability = 0.1             # approximate probability of
+                                      # having a transition between
+                                      # any two states
+     
+    TruthProbability = 0.5            # probability with which any
+                                      # atomic proposition is true in
+                                      # a state
+}

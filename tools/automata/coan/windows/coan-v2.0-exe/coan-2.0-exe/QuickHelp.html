@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> Quick Help for CoAn</title>
+  <meta name="description" content="quick help page for the CoAn automaton simulator with major shortkey, mouse button and syntax information">
+  <meta name="author" content="Elmar Stellnberger">
+</head>
+
+
+<body>
+
+  <!--nav><i>Language:</i> <b>English</b>, <a href="Islaendische-Banken-Krise.html.de">Deutsch</a> </nav-->
+
+  <header>
+    <h1> Quick Help for CoAn </h1>
+    <div><i> Quick help page for the CoAn automaton simulator with major shortkey, mouse button and syntax information </i></div>
+  </header>
+
+<h2> Introduction </h2>
+
+<p> The automaton simulator can be in one of three modes: overview mode, edit mode and execution mode. When the program starts it is in overview mode and you can see a tree of all automata provided by the current file you have loaded. In edit mode you see buttons for special characters at the left. Execution mode is here to run automata or simulate their execution. The left and bottom side display tape and stack contents. You go from one mode to the next by pressing F4 or selecting the respective mode from the View menu. </p>
+
+<h2> Overview Mode </h2>
+
+<p> Overview mode is here to select the current automaton for edit and execution mode. When you have selected an automaton it will display a short description for this automaton at the bottom of the treeview. You may edit this description by pressing Tab in order to navigate into the description field or by simply clicking with your mouse into the description field. Descriptions are edited as html text.  You may also change the current automata tree. Rename an automaton by holding Alt down while clicking on the respective entry or just press Alt+Return when you have moved the selection with the up and down arrow keys to the desired automaton. The space key will expand or collapse a respective subtree. Using Alt+Up or Alt+Down you can move the positin of an automaton/machine entry up and down inside the tree. The edit menu also allows you to delete and automaton or create a new automaton or directory. Shift+Delete deletes an automaton without asking back for permission. In deed the edit menu is for editing the automata tree in the overview mode and not for editing mode. Importing one file into the other will merge both automaton trees putting the tree of the imported file into a directory with the name of the file. Exporting as SVG allows you to print an automaton, to edit it with a vector drawing program like inkscape or to insert it into a word processing file like a Libre Office file.
+
+<h2> Editing an  Automaton </h2>
+
+<dl>
+<dt> double click: <dd> create a new node
+<dt> drag with the left mouse button from out of a node to another node: <dd> create an edge (you may intermittantely press the right mouse button while you keep holding the left button to create additional vertices for the current track)
+<dt> left click on an edge: <dd> selects the edge for further editing
+<dt> left click on the label of an edge: <dd> edits the edge lable
+<dt> hold down the right button and move: <dd> change the position of a node or of the vertex of an edge (you may need to select the edge first if you are about to move a tangent node. Moving tangent nodes allows you to create curved edges)
+<dt> right click on an edge or node: <dd> open the context menu for the respective edge or node allowing to reposition the label of an edge and to set start and final nodes. 
+</dl>
+
+<h2> Running an Automaton </h2>
+
+<p> Select the current tape content and actual automaton parameters by right or double clicking on the tape bar at the bottom when the automaton state is reset, at the beginning or the end of execution. Then execute the automaton by pressing F6, F8, F9 or Strg/Shift-F9. You may pretty well see from the execute menu on how to do it. The difference betwenn F9 and Ctrl/Shift-F9 is that with F9 a non deterministic automaton will stop to execute as soon as the first result is available while with Ctrl/Shift-F9 it will execute as far as possible. If you have pressed Ctrl/Shift-F9 intermediate results are not lost: Right or double click into the bottom or left tape sidebars in order to view all outcomes which have been generated so far. During execution the left sidebar views exactly the same results as the tape bar at the bottom. It is a fact that right or double clicking into the tape bar at the bottom may invoke two different functions depending on the execution state: If the execution is at the beginning or reset with F5 it will show you a menu for selecting a tape for a new execution. The same applies when the execution is at the end and only one result has been generated which is shown in the tape bar. In all other states that is during execution and at the end when more than one result has been generated right or double clicking into the bottom tape bar will show you an outcomes list with all outcomes generated so far by the execution. If you click into the left sidebar it will always open up the outcomes dialogue because the tape for a new execution can only be selected in the bottom bar. </p>
+
+<h2> Syntax of Automata Labels </h2>
+
+<dl>
+<dt> Finite Automata
+<dd> A multiple character edge will by default expect the characters to be read in sequence. It can be replaced by multiple edges with intermediate nodes. Character set edges on the other hand can be replaced by multiple parallel edges. Create a character set edge by entering all the characters and by terminating these characters with the ring operator '∘'.  You can have a multiple step character set edge by separating each character set with the ring operator. Each character set will then be read in sequence at execution mode. The special character '…' or '\..' is used to create character ranges while the special character '∖-' is used as setminus operator. Select these special characters from the button menu at the left or write the respective escape sequence startinng with a backslash. The ring operator can also be achieved by entering a backslash and a plus character i.e. '\+' while the setminus operator is created by backslash and minus sign '\-'. If you want to complement a character set introduce it with the non equal operator '!=' or '\!='. The usage of greek variables for finite automata does only make sense if they are to be replaced by an automaton parameter value on execution. Go to the settings menu in order to define formal parameters. When selecting the tape the automaton will be executed upon you may then also select the actual parameters for the current machine.
+
+<dt> PushDown Automata
+<dd> The input characters to be read are separated from the stack content to be popped and the stack content to be pushed by a slash '/'. If you want to have the slash in the input or stack alphabet you will need to shield it with a backslash character. The shielding backslash will not be displayed for the input alphabet section of an edge unless the edge label is edited. You may use a greek variable to hold one of many possible input characters during the execution of the edge. Separate the greek variable at the beginning with an equal or non-equal '≠' orr '!=' sign from the character set used to activate this edge. The non equal sign is generated by the three character backslash, exclamation mark and equal sign '\!='.
+
+<dt> Variables and Indexes
+<dd> While one character variables continue to be the most common case it is possible to index variable characters with the 'ᴗ' or '\{sub}' sign. It is even possible to index two times. For this reason all the indexes need to be closed with the  '❫' or '\{endsub}' sign. The same index character as used to index variables in edges and nodes can be used to index the label of states for finite, pushdown automata and turing machines.
+
+<dt> The full set of 256 chars
+<dd>  All characters with a value lower than 32 (space) are control characters and need to be escaped. Basically all characters can be given by their character value. The value of an 'A' is f.i. '\x41' in hex mode or '\101' in octal mode. It is also possible to enter '\{0x41}' or '\{101}'. The escape sequences '\n', '\r', '\a', '\t', '\v', '\b' and '\f' equal the respective character codes as in C/C++ (\x0A, \x0D, \0x07, \x09, \x0B, \x08, \x0C). 
+</dl>
+
+<dt> Turing Machines
+<dd> Turing Machines are currently programmed to either move the cursor or write a letter in one step but not to perform both actions. Write (abcd,L) to move to the lefft when the machines stands over an 'a', 'b', 'c' or 'd'. The brackets can be left out. If you want to write an 'L' or 'R' to the tape shield the respective letter with a backslash '\L' or '\R'. Variables may also be used like f.i. (α=abcd,L) or (α!=efg,R). They are remembered throughout different steps that follow. Turing machines can also be non-deterministic. Create two edges with a common precondition in order to test this out.
+
+<dt> Machine Schemata
+<dd> Machine schemata are a high level utility to create compound Turing machines composed out of several individual Turing machines. Simply write the name of a previously defined machine into the node of a machine schema and separate different machine names by spaces. Machine names are global so that no two machines with the same name may reside in the same file (while you may use the same name for a directory several times). Predefined machines are L, R, L:# and R:Y,N where # denotes a character parameter that tells the sub-machine at which characters to halt when searching to the left or right respectively. If a machine schema needs to write a character simply write the character separated by spaces into the node description. This is why your own machine names should at least be composed out of two characters.
+<p> It is not only possible to add character parameters but also to add value parameters; use: MyMachine_k,l:C,D where k,l are value parameters and C, D are character parameters. You may then use the value parameters in the exponent like L^k (L to the power of k; or L repeated k times). The exponent may contain any integer expresion like &ldquo;k+1&rdquo; or &ldquo;1&le;k&le;3 ? k : 0&rdquo;. It is important that you do not insert spaces between the individual parameters. A space as character parameter needs to be escaped. The different kinds of parameters need to be given in this sequence: exponent, value parameters, character parameters. This is also due to the exponential value operator being written by a '^' like f.i. '2^3' instead of 8. It is the same character as the power operator for the whole machine to repeat n times is.</p>
+
+<dt> Special Characters
+<dd> There are some characters with special meaning like '∘' ~ '\+', '…' ~ '\..', '≠' ~ '\!=', '∖' ~ '\-', '≤' ~ '\<=', '≥' ~ '>=', 'ᴗ' ~ '\{sub}', '❫' ~ '\{endsub}'. It is important to note that \{endsub} or \:endsub: is a special character different from the closing bracket. '\{sub}' and '\{endsub} are used to index variables or to index the label of nodes. Greek letters can be created with the following character sequences:  '\{alpha}', '\{beta}', '\{gamma}', '\{delta}', '\{epsilon}', '\{zeta}', '\{eta}', '\{theta}', '\{iota}', '\{kappa}', '\{lambda}', '\{my}', '\{ny}', '\{xi}', '\{omikron}', '\{pi}', '\{rho}', '\{final_sigma}', '\{sigma}', '\{tau}', '\{ypsilon}', '\{phi}', '\{chi}', '\{psi}', '\{omega}', '\{dialytik_iota}' whereby '\:epsilon:' has the special meaning of the zero length character string. '\:espsilon:' may thus not be used as a character variable. The only exception to these escaping rules poses the description field. As you enter html text into the description field you need to escape there with ampersand and semicolon i.e. &amp;alpha;
+</dd>
+
+</dl>
+
+<h2> known erros </h2>
+
+<p> There is no k-Copy machine among the predefined machines (only L/R<sub>#</sub> available) though the button that appears when editing machine schematas would indicate that there is. The machine names Copy, Erase, SL and SR (for the Left/Right Shift machines) are predefined for future versions. </p>
+
+<br><br><br>
+
+</body>
+</html>

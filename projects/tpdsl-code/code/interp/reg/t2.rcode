@@ -1,0 +1,18 @@
+.def main: args=0, locals=4 ; local i is in r1
+; i = 0
+	iconst r1, 0
+; while i<10:
+loop:
+	iconst r2, 10
+	ilt r1,r2,r3
+	brf r3, done
+
+; print i
+	print r1
+
+;	i = i + 1
+	iconst r3, 1
+	iadd r3,r1,r1
+	br loop
+done:
+	halt

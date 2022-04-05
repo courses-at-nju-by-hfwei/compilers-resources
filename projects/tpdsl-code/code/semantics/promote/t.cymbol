@@ -1,0 +1,10 @@
+float a[];
+int d[];
+int c = 'z'+1;    // check variable init (no promote on int)
+void f() {
+    a[0] = 4*'i'; // promote char to int to float
+    a[1] = d[0];  // promote int element to float
+    a['x'] = 1;   // check array index promotion
+    g('q',10);    // arg promotion
+}
+int g(int x, float y) { return 'k'; } // promote 'k' to int

@@ -1,0 +1,11 @@
+{
+  int i;
+  int j;
+  i = 0;
+  {
+    int i;
+    int x;
+    x = 5;
+  }
+  x = 3;
+}

@@ -1,0 +1,20 @@
+; T t
+.globals 1
+
+.def main: args=0, locals=2
+; t = null
+        null r1
+	gstore r1, 0     ; t=null
+; t = new T()
+	struct r1, 2    ; hold t in r1
+	gstore r1, 0     ; t points at struct
+; t.x = 1
+	iconst r2, 1
+	fstore r2, r1, 0 ; field 0
+; t.y = "foo"
+	sconst r2, "foo"
+	fstore r2, r1, 1 ; field 1
+; print t.x
+	fload r2, r1, 0
+	print r2
+	halt

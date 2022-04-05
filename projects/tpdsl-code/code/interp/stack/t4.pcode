@@ -1,0 +1,5 @@
+sconst "hi"
+fconst 3.4
+iconst 2
+null
+cconst 'c'

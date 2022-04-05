@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>fa</type>
+	<!--The list of states.-->
+	<state id="4">
+		<x>439.0</x>
+		<y>90.0</y>
+		<final />
+	</state>
+	<state id="0">
+		<x>137.0</x>
+		<y>149.0</y>
+		<initial />
+	</state>
+	<state id="3">
+		<x>390.0</x>
+		<y>187.0</y>
+		<final />
+	</state>
+	<state id="2">
+		<x>257.0</x>
+		<y>202.0</y>
+	</state>
+	<state id="1">
+		<x>253.0</x>
+		<y>101.0</y>
+	</state>
+	<!--The list of transitions.-->
+	<transition>
+		<from>1</from>
+		<to>4</to>
+		<read></read>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>1</to>
+		<read>aaa</read>
+	</transition>
+	<transition>
+		<from>2</from>
+		<to>2</to>
+		<read>aa</read>
+	</transition>
+	<transition>
+		<from>3</from>
+		<to>3</to>
+		<read>bb</read>
+	</transition>
+	<transition>
+		<from>2</from>
+		<to>4</to>
+		<read></read>
+	</transition>
+	<transition>
+		<from>4</from>
+		<to>4</to>
+		<read>bbb</read>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>3</to>
+		<read></read>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>1</to>
+		<read>aaa</read>
+	</transition>
+	<transition>
+		<from>2</from>
+		<to>3</to>
+		<read></read>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>2</to>
+		<read>aa</read>
+	</transition>
+</structure>

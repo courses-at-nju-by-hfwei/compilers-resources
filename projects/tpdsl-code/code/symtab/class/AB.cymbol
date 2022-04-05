@@ -1,0 +1,14 @@
+// start of global scope    // <callout id="co.class-symtab-AB-globals"/>
+class A {					// <callout id="co.class-symtab-AB-A"/>
+public:
+ int x;
+ void foo()					// <callout id="co.class-symtab-AB-A-foo"/>
+ { ; }						// <callout id="co.class-symtab-AB-A-foo1"/>
+};
+class B : public A {		// <callout id="co.class-symtab-AB-B"/>
+ int y;
+ void foo()					// <callout id="co.class-symtab-AB-B-foo"/>
+ {                          // <callout id="co.class-symtab-AB-B-foo1"/>
+   int z = x + y;
+ }
+};

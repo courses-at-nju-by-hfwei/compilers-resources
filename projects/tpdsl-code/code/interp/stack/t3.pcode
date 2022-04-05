@@ -1,0 +1,11 @@
+.def main: args=0, locals=0
+	iconst 4
+	call f()
+	print
+	halt
+
+.def f: args=1, locals=0
+	iconst 2
+	load 0 ; load first arg
+	imul
+	ret

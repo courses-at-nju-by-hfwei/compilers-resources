@@ -1,0 +1,40 @@
+group SQL;
+
+// START: javaToSQLTypeMap
+javaToSQLTypeMap ::= [
+    "int":"INTEGER",    // "int" maps to "INTEGER"
+    "String":"TEXT",
+    "float":"DOUBLE",
+    "double":"DOUBLE",
+    "Date":"DATETIME",
+    default : key       // If not found, yield key; don't map
+]
+// END: javaToSQLTypeMap
+
+// START: table
+objectTables(class, fields, arrayFields) ::= <<
+CREATE TABLE <class.simpleName> (
+    ID INTEGER NOT NULL UNIQUE PRIMARY KEY,
+    <fields:columnForSingleValuedField(); separator=",\n">
+);
+<arrayFields:tableForMultiValuedField()>
+>>
+// END: table
+
+// START: columnForSingleValuedField
+columnForSingleValuedField(f)::="<column(name=f.name, javaType=f.type)>"
+// END: columnForSingleValuedField
+
+// START: column
+column(name,javaType)::="<name> <javaToSQLTypeMap.(javaType.simpleName)>"
+// END: column
+
+// START: tableForMultiValuedField
+tableForMultiValuedField(f) ::= <<
+CREATE TABLE <class.simpleName>_<f.name> (
+    ID INTEGER NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+    <column(name=f.name, javaType=f.type.componentType)>,
+    <class.simpleName>_ID INTEGER NOT NULL
+);<\n>
+>>
+// END: tableForMultiValuedField

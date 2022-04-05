@@ -1,0 +1,18 @@
+class A { int x; };
+float a[];
+int d[];
+int c = 'z';
+void f() {
+	a[3] = a[0]+4*'i'+d[0];
+	boolean b = a[3+'a'] < 3.4;
+	float f = a['x']+g('q',10);
+	f = 3;
+	int i;
+	A s;
+	int j = h(1)+4*a[i]+s.x;
+}
+int g(int x, float y) { return 'k'; }
+int h(int x) { return x; }
+
+float ff = g(3,3.4);
+float gg = d[0];

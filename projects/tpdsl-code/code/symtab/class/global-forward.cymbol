@@ -1,0 +1,7 @@
+// globals  // <callout id="co.class-symtab-forward-globals"/>
+int main() // <callout id="co.class-symtab-forward-main"/>
+{           // <callout id="co.class-symtab-forward-main1"/>
+ x = y; // shouldn't see global x or local y; ERROR!
+ int y;
+}
+int x;

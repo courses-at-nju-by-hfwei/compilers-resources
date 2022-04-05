@@ -1,0 +1,11 @@
+class A {
+	int x;
+};
+
+void f() {
+	float a[];
+	float f = a['x'];
+	A *p;
+	p->x = 3;
+	a[true] = 3.4;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ ! Excerpted from "Language Implementation Patterns",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
+-->
+<project default="compile">
+
+  <property file="../../build.properties" />
+  <import file="../../build-macros.xml" />
+
+  <target name="init">
+    <init />
+  </target>
+
+  <target name="clean">
+    <clean />
+  </target>
+
+  <target name="generate" depends="init">
+    <generate />
+  </target>
+
+  <target name="compile" depends="generate">
+    <compile />
+  </target>
+
+  <target name="run" depends="compile">
+    <echo message="Running tests in ${basedir}" />
+
+    <echo message="Now >> t.pcode" />
+    <run class="Interpreter" argline="t.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t2.pcode" />
+    <run class="Interpreter" argline="t2.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t3.pcode" />
+    <run class="Interpreter" argline="t3.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t4.pcode" />
+    <run class="Interpreter" argline="t4.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t5.pcode" />
+    <run class="Interpreter" argline="t4.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t6.pcode" />
+    <run class="Interpreter" argline="t4.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t7.pcode" />
+    <run class="Interpreter" argline="t4.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t8.pcode" />
+    <run class="Interpreter" argline="t4.pcode -trace -dis -dump" />
+
+    <echo message="Now >> t9.pcode" />
+    <run class="Interpreter" argline="t4.pcode -trace -dis -dump" />
+
+    <echo message="Now >> struct.pcode" />
+    <run class="Interpreter" argline="struct.pcode -trace -dis -dump" />
+
+    <echo message="Now >> factorial.pcode" />
+    <run class="Interpreter" argline="factorial.pcode -trace -dis -dump" />
+
+<!--
+  Takes long, so turned off.
+    <echo message="Now >> loop.pcode" />
+    <run class="Interpreter" argline="loop.pcode -trace -dis -dump" />
+-->
+  </target>
+
+  <target name="run-single">
+    <run-single />
+  </target>
+</project>

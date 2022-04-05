@@ -1,0 +1,17 @@
+.def f: args=1, locals=2  ; int f(int x)
+; int y = 2*x
+	iconst r2,2   ; get int 2 into a reg
+	imul r2,r1,r3 ; mult 2 by arg
+; return y
+	move r3, r0  ; get result into r0 result register
+	ret
+
+.def g: args=0, locals=0
+	ret
+
+.def main: args=0, locals=1
+	iconst r1, 4
+	call f(), r1
+	print r0
+	call g(), r0
+	halt

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ ! Excerpted from "Language Implementation Patterns",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
+-->
+<project default="compile" basedir="." name="Source code [FINAL BOOK NAME HERE]">
+
+	<import file="build-macros.xml" />
+
+		<!-- Initializes the build, creates some needed directories and stuff -->
+	<target name="init">
+    <ant antfile="IR/build.xml" target="init" inheritall="false" />
+    <ant antfile="interp/build.xml" target="init" inheritall="false" />
+    <ant antfile="parsing/build.xml" target="init" inheritall="false" />
+    <ant antfile="reader/build.xml" target="init" inheritall="false" />
+    <ant antfile="semantics/build.xml" target="init" inheritall="false" />
+    <ant antfile="symtab/build.xml" target="init" inheritall="false" />
+    <ant antfile="trans/build.xml" target="init" inheritall="false" />
+    <ant antfile="walking/build.xml" target="init" inheritall="false" />
+	</target>
+
+		<!-- Cleans the entire project and sub-projects -->
+	<target name="clean">
+    <ant antfile="IR/build.xml" target="clean" inheritall="false" />
+    <ant antfile="interp/build.xml" target="clean" inheritall="false" />
+    <ant antfile="parsing/build.xml" target="clean" inheritall="false" />
+    <ant antfile="reader/build.xml" target="clean" inheritall="false" />
+    <ant antfile="semantics/build.xml" target="clean" inheritall="false" />
+    <ant antfile="symtab/build.xml" target="clean" inheritall="false" />
+    <ant antfile="trans/build.xml" target="clean" inheritall="false" />
+    <ant antfile="walking/build.xml" target="clean" inheritall="false" />
+	</target>
+
+		<!-- Generates all antlr-related code based on the grammars -->
+	<target name="generate" depends="init">
+    <ant antfile="IR/build.xml" target="generate" inheritall="false" />
+    <ant antfile="interp/build.xml" target="generate" inheritall="false" />
+    <ant antfile="parsing/build.xml" target="generate" inheritall="false" />
+    <ant antfile="reader/build.xml" target="generate" inheritall="false" />
+    <ant antfile="semantics/build.xml" target="generate" inheritall="false" />
+    <ant antfile="symtab/build.xml" target="generate" inheritall="false" />
+    <ant antfile="trans/build.xml" target="generate" inheritall="false" />
+    <ant antfile="walking/build.xml" target="generate" inheritall="false" />
+	</target>
+
+		<!-- Compiles the entire project and sub-projects -->
+	<target name="compile" depends="generate">
+    <ant antfile="IR/build.xml" target="compile" inheritall="false" />
+    <ant antfile="interp/build.xml" target="compile" inheritall="false" />
+    <ant antfile="parsing/build.xml" target="compile" inheritall="false" />
+    <ant antfile="reader/build.xml" target="compile" inheritall="false" />
+    <ant antfile="semantics/build.xml" target="compile" inheritall="false" />
+    <ant antfile="symtab/build.xml" target="compile" inheritall="false" />
+    <ant antfile="trans/build.xml" target="compile" inheritall="false" />
+    <ant antfile="walking/build.xml" target="compile" inheritall="false" />
+	</target>
+
+    <!-- Runs all projects (all their tests in succession -->
+  <target name="run" depends="compile">
+    <ant antfile="IR/build.xml" target="run" inheritall="false" />
+    <ant antfile="interp/build.xml" target="run" inheritall="false" />
+    <ant antfile="parsing/build.xml" target="run" inheritall="false" />
+    <ant antfile="reader/build.xml" target="run" inheritall="false" />
+    <ant antfile="semantics/build.xml" target="run" inheritall="false" />
+    <ant antfile="symtab/build.xml" target="run" inheritall="false" />
+    <ant antfile="trans/build.xml" target="run" inheritall="false" />
+    <ant antfile="walking/build.xml" target="run" inheritall="false" />
+  </target>
+
+</project>

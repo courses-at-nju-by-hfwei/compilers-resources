@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DOCK=""
+if [[ "`uname`" = "Darwin" ]]; then
+  DOCK="-Xdock:name=GOAL -Xdock:icon=goal.icns"
+fi
+
+DIR=`dirname $0`
+export CLASSPATH="${DIR}":"${DIR}/plugins":"${DIR}/lib":$CLASSPATH
+
+java \
+  ${JVMARGS} \
+  -DapplicationRoot="${DIR}" \
+  -Dorg.java.plugin.boot.pluginsRepositories="${DIR}/plugins" \
+  -Djpf.boot.config="${DIR}/boot.properties" \
+  -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog \
+  -Dorg.apache.commons.logging.simplelog.log.org.java.plugin=fatal \
+  $DOCK \
+  -jar "${DIR}/lib/jpf-boot.jar" "$@"

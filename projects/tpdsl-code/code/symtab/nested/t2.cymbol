@@ -1,0 +1,6 @@
+// global scope
+float f(int x)
+{ 
+    float i; 
+    { float z = x+y; i = z; } 
+}

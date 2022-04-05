@@ -1,0 +1,5 @@
+void foo() {
+  int i;
+  int *pI = &i+1;
+  *(pI+2) = 4; // pI[2] = 4;
+}

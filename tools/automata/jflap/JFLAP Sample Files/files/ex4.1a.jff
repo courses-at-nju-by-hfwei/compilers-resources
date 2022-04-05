@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>re</type>
+	<!--The regular expression.-->
+	<expression>(q+a)+b*+cd</expression>
+</structure>

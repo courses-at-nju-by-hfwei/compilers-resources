@@ -1,0 +1,24 @@
+.globals 2; n, i
+; n = 100000000
+	iconst 100000000
+	gstore 0
+; i = 0
+	iconst 0
+	gstore 1
+; while i<n:
+start:
+	gload 1
+	gload 0
+	ilt
+	brf done
+;         i = i + 1
+	gload 1
+	iconst 1
+	iadd
+	gstore 1
+	br start
+done:
+; print "looped "+n+" times."
+	sconst "done"
+	print
+	halt

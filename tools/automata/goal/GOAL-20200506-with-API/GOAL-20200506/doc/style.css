@@ -1,0 +1,193 @@
+
+body {
+    width: 800px;
+    margin: 0px auto;
+}
+
+/*-------------------- Headers --------------------*/
+
+h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-variant: small-caps;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  margin-top: 60px;
+}
+
+h1.nopadding {
+  margin-top: 0px;
+}
+
+h3 {
+  color: #0000FF;
+}
+
+/*-------------------- TOC --------------------*/
+
+#toc {
+  margin: 1.2em 0 0 2em;
+  float: right;
+  width: 200px;
+  font-size: 80%;
+  clear: both;
+}
+
+#toc #tocheader {
+  border: 1px solid;
+  background-color: #9999FF;
+  text-align: left;
+  font-weight: bold;
+  padding: 3px;
+  margin-bottom: 2px;
+}
+
+#toc #toclist {
+  border: 1px solid;
+  background-color: #CCCCFF;
+  text-align: left;
+  padding: 0.5em 0 0.7em 0;
+}
+
+#toc #toclist ul {
+  list-style-type: circle;
+  list-style-image: none;
+  margin: 0;
+  line-height: 1.2em;
+  padding-left: 1.8em;
+}
+
+#toc #toclist ul li {
+  padding-left: 0em;
+}
+
+/*-------------------- Tables --------------------*/
+
+table.decorated, table.decorated th, table.decorated td {
+  border: 2px solid #228800;
+  border-collapse: collapse;
+}
+
+table.decorated tr.header {
+  background: #AACC00;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+table.decorated tr.row2 {
+  background: #E9FFE9;
+}
+
+td, th {
+  padding: 5px;
+}
+
+td.param {
+  white-space: nowrap;
+}
+
+/*-------------------- Lists --------------------*/
+
+ul, ol, dl {
+  padding-top: 5px;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+dd {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+/*-------------------- Texts --------------------*/
+
+.todo {
+  color: red;
+}
+
+.plain {
+  text-align: justify;
+  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.note {
+  color: #FF4444;
+  margin: 10px;
+  padding: 5px 10px 5px 10px;
+  border: 1px dashed #FF4444;
+  display: list-item;
+  list-style-type: none;
+  list-style-image: url('images/Crystal_Clear_app_error_32x32.png');
+  list-style-position: inside;
+}
+
+.tip {
+  color: #4444FF;
+  margin: 10px;
+  padding: 5px 10px 5px 10px;
+  border: 1px dashed #4444FF;
+  display: list-item;
+  list-style-type: none;
+  list-style-image: url('images/Crystal_Clear_app_ktip_32x32.png');
+  list-style-position: inside;
+}
+
+pre {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: #9999EE;
+  padding: 10px;
+}
+
+code {
+
+}
+
+/*-------------------- Images --------------------*/
+
+div.figure {
+  margin-top: 1em;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+div.figure a img {
+  border-style: none;
+  border: 0;
+}
+
+div.figure div.caption {
+  padding-top: 0.5em;
+}
+
+div.figure span.large {
+  display: inline-block;
+  width: 500px
+}
+
+div.figure span.medium {
+  display: inline-block;
+  width: 300px
+}
+
+div.figure span.small {
+  display: inline-block;
+  width: 150px
+}
+
+figure {
+  margin-top: 1em;
+  padding-bottom: 1.5em;
+  text-align: center;  
+}
+
+figcaption {
+  border: none;
+  background: transparent;
+  word-wrap: normal;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+.def main: args=0, locals=4
+; n = 100000000
+	iconst r1, 100000000
+; i = 0
+	iconst r2, 0
+; get 1 into a register
+        iconst r4, 1
+; while i<n:
+start:
+	ilt r2, r1, r3
+	brf r3, done
+;         i = i + 1
+	iadd r4, r2, r2
+	br start
+done:
+; print "looped "+n+" times."
+	sconst r4, "done"
+	print r4
+	halt

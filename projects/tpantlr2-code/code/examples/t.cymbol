@@ -1,0 +1,6 @@
+// Cymbol test
+int g = 9;        // a global variable
+int fact(int x) { // factorial function
+    if x==0 then return 1;
+    return x * fact(x-1);
+}

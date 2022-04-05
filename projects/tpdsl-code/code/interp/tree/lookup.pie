@@ -1,0 +1,11 @@
+x = 1           # create global variable
+def f(x):       # define f in global space
+    print x     # access parameter; prints 10
+    y = 2       # create local variable
+.
+def g():        # define g in global space
+    x = 3       # set global variable
+.
+f(10)
+g()
+print x         # prints 3 (g alters global value)

@@ -1,0 +1,10 @@
+	iconst 1
+	itof
+	fconst 3.4
+	fadd
+	print
+
+	iconst 4
+	iconst 3
+	isub
+	print

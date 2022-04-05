@@ -1,0 +1,16 @@
+.def main: args=0, locals=0
+; print f(1,2)
+    iconst 10               ; push first argument
+    iconst 20               ; push second argument
+    call f()
+    print                   ; print return value
+    halt
+.def f: args=2, locals=1    ; void f(x,y)
+; int z = x + y
+    load 0                  ; push first argument x
+    load 1                  ; push second argument y
+    iadd
+    store 2                 ; store into local z
+; return z
+    load 2
+    ret

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b13. -->
+<structure>
+	<type>turing</type>
+	<!--The list of states.-->
+	<state id="0">
+		<x>139.0</x>
+		<y>171.0</y>
+		<initial />
+	</state>
+	<state id="1">
+		<x>324.0</x>
+		<y>171.0</y>
+	</state>
+	<state id="2">
+		<x>492.0</x>
+		<y>173.0</y>
+	</state>
+	<state id="3">
+		<x>671.0</x>
+		<y>175.0</y>
+		<final />
+	</state>
+	<state id="4">
+		<x>230.0</x>
+		<y>331.0</y>
+	</state>
+	<!--The list of transitions.-->
+	<transition>
+		<from>2</from>
+		<to>2</to>
+		<read>X</read>
+		<write>X</write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>2</from>
+		<to>2</to>
+		<read>b</read>
+		<write>b</write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>4</from>
+		<to>4</to>
+		<read>a</read>
+		<write>a</write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>4</from>
+		<to>4</to>
+		<read>b</read>
+		<write>b</write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>4</from>
+		<to>4</to>
+		<read>X</read>
+		<write>X</write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>1</to>
+		<read>b</read>
+		<write>X</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>2</from>
+		<to>4</to>
+		<read>a</read>
+		<write>X</write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>4</from>
+		<to>0</to>
+		<read></read>
+		<write></write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>a</read>
+		<write>a</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>1</to>
+		<read>b</read>
+		<write>b</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>X</read>
+		<write>X</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>1</to>
+		<read>X</read>
+		<write>X</write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>2</from>
+		<to>3</to>
+		<read></read>
+		<write></write>
+		<move>R</move>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>2</to>
+		<read></read>
+		<write></write>
+		<move>L</move>
+	</transition>
+	<transition>
+		<from>1</from>
+		<to>4</to>
+		<read>a</read>
+		<write>X</write>
+		<move>L</move>
+	</transition>
+</structure>

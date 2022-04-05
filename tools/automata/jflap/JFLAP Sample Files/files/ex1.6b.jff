@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>fa</type>
+	<!--The list of states.-->
+	<state id="0">
+		<x>76.0</x>
+		<y>103.0</y>
+		<initial />
+		<final />
+	</state>
+	<!--The list of transitions.-->
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>aaa</read>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>aa</read>
+	</transition>
+</structure>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b13. -->
+<structure>
+	<type>grammar</type>
+	<!--The list of productions.-->
+	<production>
+		<left>S</left>
+		<right>AC</right>
+	</production>
+	<production>
+		<left>C</left>
+		<right>AB</right>
+	</production>
+	<production>
+		<left>B</left>
+		<right>CC</right>
+	</production>
+	<production>
+		<left>A</left>
+		<right>a</right>
+	</production>
+	<production>
+		<left>C</left>
+		<right>b</right>
+	</production>
+	<production>
+		<left>S</left>
+		<right>SS</right>
+	</production>
+	<production>
+		<left>A</left>
+		<right>AA</right>
+	</production>
+</structure>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b13. -->
+<structure>
+	<type>pda</type>
+	<!--The list of states.-->
+	<state id="1">
+		<x>284.0</x>
+		<y>142.0</y>
+		<final />
+	</state>
+	<state id="0">
+		<x>85.0</x>
+		<y>142.0</y>
+		<initial />
+	</state>
+	<!--The list of transitions.-->
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>b</read>
+		<pop>b</pop>
+		<push>bb</push>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>a</read>
+		<pop>a</pop>
+		<push>aa</push>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>1</to>
+		<read></read>
+		<pop>Z</pop>
+		<push></push>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>a</read>
+		<pop>b</pop>
+		<push></push>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>b</read>
+		<pop>a</pop>
+		<push></push>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>a</read>
+		<pop>Z</pop>
+		<push>aZ</push>
+	</transition>
+	<transition>
+		<from>0</from>
+		<to>0</to>
+		<read>b</read>
+		<pop>Z</pop>
+		<push>bZ</push>
+	</transition>
+</structure>

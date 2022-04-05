@@ -1,0 +1,14 @@
+struct A {
+  int x;
+  struct B { int y; };
+  struct B b;
+};
+
+int i=0; int j=0;
+void f() {
+  struct A a;
+  a.x = 1+i*j;
+  a.b.y = 2;
+  boolean b = 3==a.x;
+  if ( i < j ) f();
+}

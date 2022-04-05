@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DOCK=""
+if [[ "`uname`" = "Darwin" ]]; then
+  DOCK="-Xdock:name=GOAL"
+fi
+
+DIR=`dirname $0`
+export CLASSPATH="${DIR}":"${DIR}/plugins":"${DIR}/lib":$CLASSPATH
+
+if [[ "$@" == "" ]]; then
+  echo "No command is given. Please use \"./gc names command\" to see a list of available commands or use \"./gc help\" to see all commands with details."
+else
+  java \
+    ${JVMARGS} \
+    -Djava.awt.headless=true \
+    -DapplicationRoot="${DIR}" \
+    -Dorg.java.plugin.boot.pluginsRepositories="${DIR}/plugins" \
+    -Djpf.boot.config="${DIR}/boot_cmd.properties" \
+    -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog \
+    -Dorg.apache.commons.logging.simplelog.log.org.java.plugin=fatal \
+    $DOCK \
+    -jar "${DIR}/lib/jpf-boot.jar" "$@"
+fi

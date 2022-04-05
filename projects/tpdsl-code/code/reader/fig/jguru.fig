@@ -1,0 +1,12 @@
+Site jguru {
+  port = 80;
+  answers = "www.jguru.com";
+  aliases = ["jguru.com", "www.magelang.com"];
+}
+Site bea {
+  port = 8080;
+  answers = "bea.jguru.com";
+}
+Server live {
+  sites = [$jguru, $bea]; // list of Site references
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- Created with JFLAP 4.0b10. -->
+<structure>
+	<type>lsystem</type>
+	<!--The L-system axiom.-->
+	<axiom>a a a a a a a a b b b b b b b b c c c c c c c c</axiom>
+	<!--The rewriting rules.-->
+	<production>
+		<left>0 B b</left>
+		<right>b</right>
+	</production>
+	<production>
+		<left>0 B c</left>
+		<right></right>
+	</production>
+	<production>
+		<left>0 a b</left>
+		<right></right>
+	</production>
+	<production>
+		<left>1 B b</left>
+		<right>B</right>
+	</production>
+	<production>
+		<left>1 B c</left>
+		<right></right>
+	</production>
+	<production>
+		<left>1 a b</left>
+		<right>B</right>
+	</production>
+</structure>

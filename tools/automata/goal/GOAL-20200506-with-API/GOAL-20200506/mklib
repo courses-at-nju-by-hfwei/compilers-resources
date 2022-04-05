@@ -1,0 +1,32 @@
+# This is a script that creates JAR files for GOAL plugins.
+# The created JAR files can be used as Java libraries.
+# Before running this script, please make sure that unzip and jar
+# are installed properly.
+
+PS="org.svvrl.goal.core org.svvrl.goal.gui org.svvrl.goal.cmd"
+TMP=tmp
+PLUGINS=plugins
+LIB=lib
+
+echo "Creating a temporary folder."
+mkdir -p ${TMP}
+
+echo "Extracting classes of the GOAL plugins."
+for p in ${PS}; do
+  echo "  - ${PLUGINS}/${p}.zip"
+  mkdir -p ${TMP}/${p}
+  unzip ${PLUGINS}/${p}.zip -d ${TMP}/${p} &> /dev/null
+done
+
+echo "Packing the classes into JAR files."
+for p in ${PS}; do
+  echo "  - ${TMP}/${p}.jar"
+  jar cf ${LIB}/${p}.jar -C ${TMP}/${p}/classes org
+done
+
+echo "Removing the temporary folder."
+rm -rf ${TMP}
+
+echo "--------------------"
+echo "Finished generating the GOAL libraries."
+echo "The GOAL libraries are placed in the \"${LIB}\" folder."

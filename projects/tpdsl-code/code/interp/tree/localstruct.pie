@@ -1,0 +1,8 @@
+struct User { name, password } # define global struct
+def f():                       # define f
+    struct User { x, y }       # hides global User def
+    u = new User               # create new User instance, put in local u
+    print u                    # prints "{x=null, y=null}"
+.                              # end body of f
+print new User                 # prints "{name=null, password=null}"
+f()                            # call f

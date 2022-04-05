@@ -1,0 +1,14 @@
+; int x,y
+.globals 2 
+
+.def main: args=0, locals=0
+; x = 9
+	iconst 9
+	gstore 0
+; y = x
+	gload 0
+	gstore 1
+; print y
+	gload 1
+	print
+	halt

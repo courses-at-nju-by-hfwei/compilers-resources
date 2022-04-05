@@ -1,0 +1,44 @@
+The following image icons created by Everaldo Coelho and YellowIcon are
+licensed under LGPL 2.1:
+- CloseTab.png
+- Crystal_Clear_app_error.png
+- Crystal_Clear_app_error_32x32.png (derived from Crystal_Clear_app_error.png)
+- Crystal_Clear_app_ktip.png
+- Crystal_Clear_app_ktip_32x32.png (derived from Crystal_Clear_app_ktip.png)
+
+The following image icons created by David Vignoni are licensed under LGPL 2.1:
+- Color.png
+- Focus.png
+- NewDocument.png
+- OpenFile.png
+- RandomFSA.png
+- Save.png
+- SaveAs.png
+
+The image icon RandomQPTL.png is a derivative work of RandomFSA.png.
+The image icon SaveAll.png is a derivative work of Save.png.
+
+The following image icons created by flamer are licensed under Creative
+Commons CC0 1.0 Universal Public Domain Dedication:
+- GOAL.png
+- soccer_ball_16x16
+- soccer_ball_24x24
+- soccer_ball_32x32
+- soccer_ball_48x48
+- soccer_ball_128x128
+
+The following files are derivative works of Tango Desktop Project and are
+licensed under Public Domain:
+- NextStage.png
+- NextStep.png
+- Pause.png
+- Play.png
+- PrevStage.png
+- PrevStep.png
+
+The following icons are licensed under the Creative Commons Attribution-Share
+Alike 3.0 Unported licence:
+- snowflake.png
+
+The following icons are licensed under Public Domain:
+- information.png

@@ -1,0 +1,18 @@
+gunit TestExpr;
+
+options {
+	parser = ExprParser;
+	lexer = ExprLexer;
+}
+
+prog:
+    "1" -> (prog (stat (expr 1) \n))
+    "1+2" -> (prog (stat (expr (expr 1) + (expr 2)) \n))
+    <<
+    a=1
+    a+b*3
+    >> -> (prog (stat a = (expr 1) \n) 
+                (stat (expr (expr a) + (expr (expr b) * (expr 3))) \n))
+
+stat:
+	"1+2" -> (stat (expr (expr 1) + (expr 2)) \n)
