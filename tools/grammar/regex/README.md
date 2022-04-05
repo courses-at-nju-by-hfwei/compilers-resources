@@ -1,19 +1,21 @@
 # regex
 
-- [regex101](https://regex101.com/)
-
+## Visualization of RE (e.g., as Railroad Diagram)
 - [Regulex](https://jex.im/regulex/)
-  - Regex Visualization
-
+- [Debuggex](https://www.debuggex.com/)
 - [regexr](https://regexr.com/)
+- [Regex-Vis](https://regex-vis.com/)
+- [regex-railroad-diagram package@atom.io](https://atom.io/packages/regex-railroad-diagram)
 
+## Operations on RE
 - [Regular Expressions Gym](http://ivanzuzak.info/noam/webapps/regex_simplifier/)
   - Slim (Simplify) your regexes one step at a time!
 
-- [Debuggex][https://www.debuggex.com/)
-
-- [FSM2Regex](http://ivanzuzak.info/noam/webapps/fsm2regex/)
-  - Convert your FSMs to regexes and your regexes to FSMs!
-
+## RE Matching
+- [regex101](https://regex101.com/)
 - [Regex Golf](https://alf.nu/RegexGolf)
   - Match "all of these" and "none of these"
+
+## Automata
+- [FSM2Regex](http://ivanzuzak.info/noam/webapps/fsm2regex/)
+  - Convert your FSMs to regexes and your regexes to FSMs!
