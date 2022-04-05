@@ -1,6 +1,5 @@
 # Tools for Automata
 
-
 ## Simulators
 - [FSM simulator](http://ivanzuzak.info/noam/webapps/fsm_simulator/)
   - Visually simulate your DFAs, NFAs and ε-NFAs, one input symbol at a time!
@@ -22,12 +21,18 @@
   > Hint: Open Test2.atm to get a few examples. If the windows executables should not run then copy `ucrtbased.dll` into the `coan-2.0-exe` directory.
 
 ## Generators
+
+- [FSM2Regex](http://ivanzuzak.info/noam/webapps/fsm2regex/)
+  - A Web app that converts finite-state machines to regular expressions and regular expressions to finite-state machines.
+  - Convert your FSMs to regexes and your regexes to FSMs!
 - [cyberzhg.github.io/toolbox](https://cyberzhg.github.io/toolbox/)
   - Regex => NFA; Regex => NFA => DFA; Regex => NFA => DFA => Min-DFA
   - Left factoring; Left recursion
   - CFG => LL(k); CFG => CNF; First & Follow
   - LR(0)/SLR(1); LR(1); LALR
   - CYK
+- [Grammophone](https://mdaines.github.io/grammophone/#)
+  - A Web app for analyzing and transforming context-free grammars, e.g. for generating strings from a grammar and computing SLR/LR/LALR parsing tables.
 
 ## Comprehensive Tools
 - [JFLAP (JFLAP7.1; July 2018)](http://www.jflap.org/)
