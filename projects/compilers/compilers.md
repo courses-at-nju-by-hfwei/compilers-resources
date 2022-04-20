@@ -11,3 +11,5 @@
 - [Small-C@wiki](https://en.wikipedia.org/wiki/Small-C)
 - [Tiny C Compiler@wiki](https://en.wikipedia.org/wiki/Tiny_C_Compiler)
 - [Portable C Compiler](https://en.wikipedia.org/wiki/Portable_C_Compiler)
+- [sheisc/ucc162.3@github](https://github.com/sheisc/ucc162.3)
+> A lightweight open-source C compiler for research and education.
