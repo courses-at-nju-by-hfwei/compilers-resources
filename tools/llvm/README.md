@@ -7,6 +7,8 @@
 ## Overview
 - [LLVM @ wiki](https://en.wikipedia.org/wiki/LLVM)
 - [LLVM Home](https://llvm.org/)
+- [LLVM for Grad Students](https://www.cs.cornell.edu/~asampson/blog/llvm.html)
+  - This is an introduction to doing research with the LLVM compiler infrastructure. It should be enough for a grad student to go from mostly uninterested in compilers to excited to use LLVM to do great work.
 
 ## On Usage
 - [Getting Started with the LLVM System](https://llvm.org/docs/GettingStarted.html)
@@ -77,6 +79,7 @@
 
 ## Books
 - [LLVM Cookbook](../../books/LLVM%20Cookbook.pdf)
-  - The Clang project provides a language front-end and tooling infrastructure for languages in the C language family (C, C++, Objective C/C++, OpenCL, CUDA, and RenderScript) for the LLVM project.
+- [Getting Started with LLVM Core Libraries](../../books/Getting%20Started%20with%20LLVM%20Core%20Libraries.pdf)
 
 ## [Clang](../clang/)
+  > The Clang project provides a language front-end and tooling infrastructure for languages in the C language family (C, C++, Objective C/C++, OpenCL, CUDA, and RenderScript) for the LLVM project.
