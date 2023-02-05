@@ -7,6 +7,7 @@
   - Maven, Gradle
 
 ## LLVM
+- [2019 LLVM Developers’ Meeting: Getting Started With LLVM](https://www.bilibili.com/video/BV1LJ411p7MR/?share_source=copy_web&vd_source=afddc1f6e07c3046ed07519aa34370fd)
 - [2019 LLVM Developers’ Meeting: Introduction to LLVM](https://youtu.be/J5xExRGaIIY)
 - [Introduction to LLVM](https://www.youtube.com/playlist?list=PLDSTpI7ZVmVnvqtebWnnI8YeB8bJoGOyv)
 - [不深不淺，帶你認識 LLVM (20191218@系統貓)](https://youtu.be/RzrHuP2aVEg)
