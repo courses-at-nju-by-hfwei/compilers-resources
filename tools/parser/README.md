@@ -41,3 +41,10 @@
   - This simulator is used to generate parsing table (LL1, SLR, LR, LALR)
 - [LR(0) Parser Visualization](https://www.cs.princeton.edu/courses/archive/spring20/cos320/LR0/)
   - Feature: tree building (JJTree); support eBNF; support lexical analysis; IntelliJ IDEA
+
+## Parser Generators
+- [congo-cc / congo-parser-generator](https://github.com/congo-cc/congo-parser-generator)
+> The CongoCC Parser Generator, the Next Generation of JavaCC 21, which in turn was the next generation of JavaCC
+
+- [dabeaz / sly](https://github.com/dabeaz/sly)
+> Sly Lex Yacc
