@@ -7,12 +7,7 @@
 - [VLex: Visualizing a Lexical Analyzer Generator](http://www.vlex-tool.net/)
   - It is awesome. Unfortunately, the link is broken!!!
   - TODO: drop an email to the authors
-> VLex visualizes the algorithms typically implemented in a lexical analyzer generator 
-in the lex tradition, i.e., converting regular expressions via non-deterministic into 
-a deterministic finite automata and then minimizing these automata.
-The visualization works incrementally, and the user can choose any location 
-to control how the algorithms continue. 
-VLex can also animate the different automata during the scanning phase.
+> VLex visualizes the algorithms typically implemented in a lexical analyzer generator in the lex tradition, i.e., converting regular expressions via non-deterministic into a deterministic finite automata and then minimizing these automata. The visualization works incrementally, and the user can choose any location to control how the algorithms continue.  VLex can also animate the different automata during the scanning phase.
 
 - [DFA and LL(1) Parser](http://vlabs.iitb.ac.in/vlabs-dev/vlab_bootcamp/bootcamp/system_deligators/labs/index.php)
 > Only for a small set of given examples.
