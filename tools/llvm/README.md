@@ -1,8 +1,6 @@
-# llvm
+# [LLVM](https://llvm.org/)
 
-## Awesome Lists
 - [LLVM Documentation](https://llvm.org/docs/index.html)
-- [LLVM Getting Started Tutorials](https://llvm.org/docs/GettingStartedTutorials.html)
 
 ## Overview
 - [LLVM @ wiki](https://en.wikipedia.org/wiki/LLVM)
@@ -10,9 +8,24 @@
 - [LLVM for Grad Students](https://www.cs.cornell.edu/~asampson/blog/llvm.html)
   - This is an introduction to doing research with the LLVM compiler infrastructure. It should be enough for a grad student to go from mostly uninterested in compilers to excited to use LLVM to do great work.
 
-## On Usage
-- [Getting Started with the LLVM System](https://llvm.org/docs/GettingStarted.html)
-  - Discusses how to get up and running quickly with the LLVM infrastructure. Everything from unpacking and compilation of the distribution to execution of some tools.
+## Tutorials
+
+- [LLVM编译器入门 @ bilibili](https://www.bilibili.com/video/BV18j411B7TF/?share_source=copy_web&vd_source=afddc1f6e07c3046ed07519aa34370fd)
+  - LLVM 整体设计
+  - Clang 前端
+  - IR 优化
+  - 代码生成 (上)
+  - 代码生成 (下)
+
+- [LLVM Getting Started Tutorials](https://llvm.org/docs/GettingStartedTutorials.html)
+  - [Getting Started with the LLVM System](https://llvm.org/docs/GettingStarted.html)
+    > Discusses how to get up and running quickly with the LLVM infrastructure. Everything from unpacking and compilation of the distribution to execution of some tools.
+  - [Getting Started with the LLVM System using Microsoft Visual Studio](https://llvm.org/docs/GettingStartedVS.html)
+    > An addendum to the main Getting Started guide for those using Visual Studio on Windows.
+  - [LLVM Tutorial: Table of Contents](https://llvm.org/docs/tutorial/index.html)
+    > Tutorials about using LLVM. Includes a tutorial about making a custom language with LLVM.
+  - [LLVM Programmer’s Manual](https://llvm.org/docs/ProgrammersManual.html)
+    > Introduction to the general layout of the LLVM sourcebase, important classes and APIs, and some tips & tricks.
 
 ## On LLVM IR
 - [LLVM Language Reference Manual](https://llvm.org/docs/LangRef.html)
@@ -80,6 +93,3 @@
 ## Books
 - [LLVM Cookbook](../../books/LLVM%20Cookbook.pdf)
 - [Getting Started with LLVM Core Libraries](../../books/Getting%20Started%20with%20LLVM%20Core%20Libraries.pdf)
-
-## [Clang](../clang/)
-  > The Clang project provides a language front-end and tooling infrastructure for languages in the C language family (C, C++, Objective C/C++, OpenCL, CUDA, and RenderScript) for the LLVM project.
