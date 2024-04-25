@@ -33,3 +33,9 @@ when you failed on `cmake` and want to retry it.
 
 - `ninja -C build check-llvm -j8`
 	- `ninja -C build check-all -j8`
+
+## References
+- [Getting Started with the LLVM System](https://llvm.org/docs/GettingStarted.html)
+- [Building LLVM with CMake](https://llvm.org/docs/CMake.html)
+- [How do you build all of LLVM? @ stackoverflow](https://stackoverflow.com/a/68753935/1833118)
+- [LLD - The LLVM Linker](https://lld.llvm.org/)
