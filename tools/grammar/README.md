@@ -21,4 +21,10 @@ and allows students to “scrub through” the animation to check their understa
 grammar construction, parse tree construction, LL(1) and LR(1) parsing, 
 grammar modification (e.g., to remove left recursion), and so forth.
 
+- [Left Factoring](https://calculator.pisqre.com/left-fact)
+- [Left Recursion](https://calculator.pisqre.com/left-rec)
+- [CFG to LL(k)](https://calculator.pisqre.com/cgf-llk)
+- [CFG to CNF](https://calculator.pisqre.com/cgf-cnf)
+
+
 ## Context-sensitive Grammar

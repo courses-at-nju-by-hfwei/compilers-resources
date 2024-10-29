@@ -42,6 +42,12 @@
 - [LR(0) Parser Visualization](https://www.cs.princeton.edu/courses/archive/spring20/cos320/LR0/)
   - Feature: tree building (JJTree); support eBNF; support lexical analysis; IntelliJ IDEA
 
+- [CYK CNF](https://calculator.pisqre.com/cyk-cnf)
+- [First & Follow](https://calculator.pisqre.com/first-follow)
+- [LR(0) & SLR(1)](https://calculator.pisqre.com/lr-slr)
+- [LR(1)](https://calculator.pisqre.com/lr)
+- [LALR](https://calculator.pisqre.com/lalr)
+
 ## Parser Generators
 - [congo-cc / congo-parser-generator](https://github.com/congo-cc/congo-parser-generator)
 > The CongoCC Parser Generator, the Next Generation of JavaCC 21, which in turn was the next generation of JavaCC
